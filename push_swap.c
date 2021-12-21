@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:34:09 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/16 05:41:17 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/21 21:42:20 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ static void	ft_make_stack(t_struct **stack, t_support *data)
 	ft_put_index(stack, data);
 }
 
+static void	ft_sort(t_struct **stack_a, t_struct **stack_b)
+{
+	if (ft_stack_size(*stack_a) < 6)
+		ft_simple(stack_a, stack_b);
+	else
+		ft_radix(stack_a, stack_b);
+}
+
 int	main(int argc, char **argv)
 {
 	t_struct	**stack_a;
@@ -40,4 +48,14 @@ int	main(int argc, char **argv)
 	stack_a = (t_struct **)malloc(sizeof(t_struct));
 	stack_b = (t_struct **)malloc(sizeof(t_struct));
 	ft_make_stack(stack_a, data);
+	if (ft_stack_sorted(stack_a))
+	{
+		ft_free_stack(stack_a);
+		ft_free_stack(stack_b);
+		return(0);
+	}
+	ft_sort(stack_a, stack_b);
+	ft_free_stack(stack_a);
+	ft_free_stack(stack_b);
+	return (0);
 }

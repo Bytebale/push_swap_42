@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:21:41 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/16 04:29:17 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/21 21:41:21 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,8 @@ typedef struct	s_struct
 
 void	ft_put_err(char *str, int fd);
 void	ft_check(t_support *data);
+void	ft_free_stack(t_struct **stack);
+int		ft_stack_sorted(t_struct **stack);
+int		ft_stack_size(t_struct *top);
 
 #endif
