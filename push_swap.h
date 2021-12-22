@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:21:41 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/21 21:41:21 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/22 21:48:46 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	ft_put_err(char *str, int fd);
 void	ft_check(t_support *data);
 void	ft_free_stack(t_struct **stack);
 int		ft_stack_sorted(t_struct **stack);
-int		ft_stack_size(t_struct *top);
+int 	ft_disToNum(t_struct **stack, int i);
+void	ft_simple(t_struct **stack_a, t_struct **stack_b);
+void	sort_5nbr(t_struct **stack_a, t_struct **stack_b);
 
 #endif

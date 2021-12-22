@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 00:05:34 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/21 21:36:20 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/22 21:46:07 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,19 @@ int	ft_stack_sorted(t_struct	**stack)
 	return (1);
 }
 
-int	ft_stack_size(t_struct *top)
+int ft_disToNum(t_struct **stack, int i)
 {
-	size_t		i;
-	t_struct	*tmp;
+	t_struct *top;
+	int		dist;
 
-	tmp = top;
-	i = 0;
-	while (tmp)
+	dist = 0;
+	top = *stack;
+	while (top)
 	{
-		tmp = tmp->next;
-		i++;
+		if (top->index = i)
+			break ;
+		dist++;
+		top = top->next;
 	}
-	return (i);
+	return (dist);
 }
