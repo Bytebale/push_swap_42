@@ -6,11 +6,11 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 00:05:34 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/22 21:46:07 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/25 22:13:22 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_put_err(char *str, int fd)
 {
@@ -18,10 +18,10 @@ void	ft_put_err(char *str, int fd)
 	exit (0);
 }
 
-void	ft_free_stack(t_struct **stack)
+void	ft_free_stack(t_stack **stack)
 {
-	t_struct	*top;
-	t_struct	*tmp;
+	t_stack	*top;
+	t_stack	*tmp;
 
 	top = *stack;
 	while (top)
@@ -33,9 +33,9 @@ void	ft_free_stack(t_struct **stack)
 	free(stack);
 }
 
-int	ft_stack_sorted(t_struct	**stack)
+int	ft_stack_sorted(t_stack	**stack)
 {
-	t_struct	*top;
+	t_stack	*top;
 	
 	top = *stack;
 	while (top && top->next)
@@ -47,9 +47,9 @@ int	ft_stack_sorted(t_struct	**stack)
 	return (1);
 }
 
-int ft_disToNum(t_struct **stack, int i)
+int ft_disToNum(t_stack **stack, int i)
 {
-	t_struct *top;
+	t_stack *top;
 	int		dist;
 
 	dist = 0;

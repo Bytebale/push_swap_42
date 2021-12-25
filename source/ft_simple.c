@@ -6,15 +6,15 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 21:43:14 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/22 21:38:00 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/25 22:02:39 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static int	ft_min_num(t_struct **stack, int num)
+static int	ft_min_num(t_stack **stack, int num)
 {
-	t_struct	*top;
+	t_stack	*top;
 	int			min_val;
 
 	top = *stack;
@@ -28,9 +28,9 @@ static int	ft_min_num(t_struct **stack, int num)
 	return (min_val);
 }
 
-static void	sor_3nbr(t_struct **stack_a)
+static void	sor_3nbr(t_stack **stack_a)
 {
-	t_struct	*top;
+	t_stack	*top;
 	int			min;
 	int			min_next;
 
@@ -64,7 +64,7 @@ static void	sor_3nbr(t_struct **stack_a)
 	}
 }
 
-static void	sort_4nbr(t_struct **stack_a, t_struct **stack_b)
+static void	sort_4nbr(t_stack **stack_a, t_stack **stack_b)
 {
 	int num;
 
@@ -87,7 +87,7 @@ static void	sort_4nbr(t_struct **stack_a, t_struct **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	sort_5nbr(t_struct **stack_a, t_struct **stack_b)
+void	sort_5nbr(t_stack **stack_a, t_stack **stack_b)
 {
 	int	num;
 
@@ -113,7 +113,7 @@ void	sort_5nbr(t_struct **stack_a, t_struct **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	ft_simple(t_struct **stack_a, t_struct **stack_b)
+void	ft_simple(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size;
 

@@ -6,16 +6,16 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 05:40:27 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/16 05:41:06 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/25 22:03:06 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static t_struct	*ft_get_min_value(t_struct **stack, t_support *data)
+static t_stack	*ft_get_min_value(t_stack **stack, t_support *data)
 {
-	t_struct	*top;
-	t_struct	*min;
+	t_stack	*top;
+	t_stack	*min;
 	int			intmin;
 
 	min = NULL;
@@ -36,7 +36,7 @@ static t_struct	*ft_get_min_value(t_struct **stack, t_support *data)
 	return (min);
 }
 
-void	ft_put_index(t_struct **stack, t_support *data)
+void	ft_put_index(t_stack **stack, t_support *data)
 {
 	data->i = 0;
 	data = ft_get_min_value(stack, data);
