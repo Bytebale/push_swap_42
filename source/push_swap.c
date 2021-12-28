@@ -6,15 +6,15 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:34:09 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:13:14 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 18:51:33 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	ft_make_stack(t_stack **stack, t_support *data)
+static void	ft_make_stack(t_list **stack, t_support *data)
 {
-	t_stack	*new_list;
+	t_list	*new_list;
 
 	data->i = 1;
 	while (data->argv[data->i])
@@ -23,12 +23,12 @@ static void	ft_make_stack(t_stack **stack, t_support *data)
 		ft_lstadd_back(stack, new_list);
 		data->i++;
 	}
-	ft_put_index(stack, data);
+	ft_put_index(stack);
 }
 
-static void	ft_sort(t_stack **stack_a, t_stack **stack_b)
+static void	ft_sort(t_list **stack_a, t_list **stack_b)
 {
-	if (ft_stack_size(*stack_a) < 6)
+	if (ft_lstsize(*stack_a) <= 5)
 		ft_simple(stack_a, stack_b);
 	else
 		ft_radix(stack_a, stack_b);
@@ -36,8 +36,8 @@ static void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 
 int	main(int argc, char **argv)
 {
-	t_stack		**stack_a;
-	t_stack		**stack_b;
+	t_list		**stack_a;
+	t_list		**stack_b;
 	t_support	data;
 
 	data.argv = argv;
@@ -46,8 +46,8 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (-1);
 	ft_check(&data);
-	stack_a = (t_stack **)malloc(sizeof(t_stack));
-	stack_b = (t_stack **)malloc(sizeof(t_stack));
+	stack_a = (t_list **)malloc(sizeof(t_list));
+	stack_b = (t_list **)malloc(sizeof(t_list));
 	ft_make_stack(stack_a, &data);
 	if (ft_stack_sorted(stack_a))
 	{

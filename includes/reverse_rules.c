@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 21:36:02 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:03:43 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 13:41:22 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	reverse_rule(t_list **stack)
 	return (0);
 }
 
-int	rra(t_stack **stack_a)
+int	rra(t_list **stack_a)
 {
 	if (reverse_rule(stack_a) == -1)
 		return (-1);
@@ -43,7 +43,7 @@ int	rra(t_stack **stack_a)
 	return (0);
 }
 
-int	rrb(t_stack **stack_b)
+int	rrb(t_list **stack_b)
 {
 	if (reverse_rule(stack_b) == -1)
 		return (-1);
@@ -51,7 +51,7 @@ int	rrb(t_stack **stack_b)
 	return (0);
 }
 
-int	rrr(t_stack **stack_a, t_stack **stack_b)
+int	rrr(t_list **stack_a, t_list **stack_b)
 {
 	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
 		return (-1);

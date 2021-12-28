@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:40:28 by lshonta           #+#    #+#             */
-/*   Updated: 2021/10/19 18:41:25 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 14:00:55 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (*lst)
 	{
 		t = ft_lstlast(*lst);
-		t->next = &*new;
+		t->next = &(*new);
+		new->next = NULL;
 	}
 	else
+	{
 		*lst = new;
+		(*lst)->next = NULL;
+	}
 }

@@ -6,16 +6,16 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 05:40:27 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:03:06 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 14:35:14 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static t_stack	*ft_get_min_value(t_stack **stack, t_support *data)
+static t_list	*ft_get_min_value(t_list **stack)
 {
-	t_stack	*top;
-	t_stack	*min;
+	t_list		*top;
+	t_list		*min;
 	int			intmin;
 
 	min = NULL;
@@ -25,7 +25,7 @@ static t_stack	*ft_get_min_value(t_stack **stack, t_support *data)
 	{
 		while (top)
 		{
-			if ((top->index == -1) && (!intmin || top->value < min->value))
+			if ((top->index == -1) && (!intmin || top->content < min->content))
 			{
 				min = top;
 				intmin = 1;
@@ -36,13 +36,16 @@ static t_stack	*ft_get_min_value(t_stack **stack, t_support *data)
 	return (min);
 }
 
-void	ft_put_index(t_stack **stack, t_support *data)
+void	ft_put_index(t_list **stack)
 {
-	data->i = 0;
-	data = ft_get_min_value(stack, data);
-	while (data)
+	t_list	*top;
+	int		index;
+
+	index = 0;
+	top = ft_get_min_value(stack);
+	while (top)
 	{
-		data->i++;
-		data = ft_get_min_value(stack, data);
+		top->index = index++;
+		top = ft_get_min_value(stack);
 	}
 }

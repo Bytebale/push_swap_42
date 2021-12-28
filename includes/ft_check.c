@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:48:23 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 21:46:08 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 16:28:49 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_repeat_arg(int nbr, t_support *data, int i)
 	i++;
 	while (data->argv[i])
 	{
-		if (ft_atoi(data->argv[i] == nbr))
+		if (ft_atoi(data->argv[i]) == nbr)
 			return (1);
 		i++;
 	}

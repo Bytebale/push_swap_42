@@ -6,7 +6,7 @@
 #    By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 13:53:04 by lshonta           #+#    #+#              #
-#    Updated: 2021/10/22 18:31:18 by lshonta          ###   ########.fr        #
+#    Updated: 2021/12/27 18:18:00 by lshonta          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ LIST_B := ft_lstnew_bonus.c\
 			ft_lstiter_bonus.c\
 			ft_lstmap_bonus.c\
 
-FLAGS := -Wall -Werror -Wextra
+FLAGS := -g -Wall -Werror -Wextra
 
 OBJ = $(patsubst %.c,%.o, $(LIST))
 OBJB = $(patsubst %.c,%.o, $(LIST_B))
@@ -81,7 +81,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJB)
-	ar -rsc $(NAME) $(OBJB)
+bonus: $(OBJ) $(OBJB) 
+	ar -rsc $(NAME) $(OBJ) $(OBJB) 
 
 .PHONY: all clean fclean re

@@ -6,17 +6,17 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 21:34:38 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:03:30 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 13:40:54 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	push_rule(t_stack **stack_to, t_stack **stack_fm)
+int	push_rule(t_list **stack_to, t_list **stack_fm)
 {
-	t_stack	*tmp;
-	t_stack	*top_to;
-	t_stack	*top_fm;
+	t_list	*tmp;
+	t_list	*top_to;
+	t_list	*top_fm;
 
 	if (ft_lstsize(*stack_fm) == 0)
 		return (-1);
@@ -39,7 +39,7 @@ int	push_rule(t_stack **stack_to, t_stack **stack_fm)
 	return (0);
 }
 
-int	pb(t_stack **stack_a, t_stack **stack_b)
+int	pb(t_list **stack_a, t_list **stack_b)
 {
 	if (push_rule(stack_b, stack_a) == -1)
 		return (-1);
@@ -47,7 +47,7 @@ int	pb(t_stack **stack_a, t_stack **stack_b)
 	return (0);
 }
 
-int	pa(t_stack **stack_a, t_stack **stack_b)
+int	pa(t_list **stack_a, t_list **stack_b)
 {
 	if (push_rule(stack_a, stack_b) == -1)
 		return (-1);

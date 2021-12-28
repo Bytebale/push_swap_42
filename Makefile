@@ -6,12 +6,13 @@
 #    By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/25 21:36:53 by lshonta           #+#    #+#              #
-#    Updated: 2021/12/25 21:44:46 by lshonta          ###   ########.fr        #
+#    Updated: 2021/12/27 16:31:21 by lshonta          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 HEADER = push_swwap.h
+MAKEB = make bonus
 
 SRCS = source/push_swap.c\
 		source/ft_simple.c\
@@ -33,8 +34,8 @@ RM = rm -rf
 
 all: ${NAME} 
 
-${NAME}: ${OBJS} $(HEADER)
-	@${MAKE} -C ./libft
+${NAME}: ${OBJS}
+	@$(MAKEB) -C ./libft
 	${CC} ${CFLAGS} ${OBJS} ./libft/libft.a -o ${NAME}
 
 clean: 

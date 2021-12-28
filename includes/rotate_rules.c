@@ -6,16 +6,16 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 21:35:20 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:03:52 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 13:41:42 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	rotate_rule(t_stack **stack)
+int	rotate_rule(t_list **stack)
 {
-	t_stack	*head;
-	t_stack	*remain;
+	t_list	*head;
+	t_list	*remain;
 
 	if (ft_lstsize(*stack) < 2)
 		return (-1);
@@ -27,7 +27,7 @@ int	rotate_rule(t_stack **stack)
 	return (0);
 }
 
-int	rb(t_stack **stack_b)
+int	rb(t_list **stack_b)
 {
 	if (rotate_rule(stack_b) == -1)
 		return (-1);
@@ -35,7 +35,7 @@ int	rb(t_stack **stack_b)
 	return (0);
 }
 
-int	ra(t_stack **stack_a)
+int	ra(t_list **stack_a)
 {
 	if (rotate_rule(stack_a) == -1)
 		return (-1);
@@ -43,7 +43,7 @@ int	ra(t_stack **stack_a)
 	return (0);
 }
 
-int	rr(t_stack **stack_a, t_stack **stack_b)
+int	rr(t_list **stack_a, t_list **stack_b)
 {
 	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
 		return (-1);

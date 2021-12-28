@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 00:05:34 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:13:22 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 14:28:49 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	ft_put_err(char *str, int fd)
 	exit (0);
 }
 
-void	ft_free_stack(t_stack **stack)
+void	ft_free_stack(t_list **stack)
 {
-	t_stack	*top;
-	t_stack	*tmp;
+	t_list	*top;
+	t_list	*tmp;
 
 	top = *stack;
 	while (top)
@@ -33,30 +33,30 @@ void	ft_free_stack(t_stack **stack)
 	free(stack);
 }
 
-int	ft_stack_sorted(t_stack	**stack)
+int	ft_stack_sorted(t_list	**stack)
 {
-	t_stack	*top;
+	t_list	*top;
 	
 	top = *stack;
 	while (top && top->next)
 	{
-		if (top->value > top->next->value)
+		if (top->content > top->next->content)
 			return (0);
 		top = top->next;
 	}
 	return (1);
 }
 
-int ft_disToNum(t_stack **stack, int i)
+int ft_distToNum(t_list **stack, int i)
 {
-	t_stack *top;
+	t_list *top;
 	int		dist;
 
 	dist = 0;
 	top = *stack;
 	while (top)
 	{
-		if (top->index = i)
+		if (top->index == i)
 			break ;
 		dist++;
 		top = top->next;

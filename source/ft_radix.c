@@ -6,15 +6,15 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 21:43:11 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:02:25 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 13:42:58 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int	ft_bits(t_stack **stack)
+static int	ft_bits(t_list **stack)
 {
-	t_stack	*top;
+	t_list	*top;
 	int		max;
 	int		bits;
 
@@ -32,9 +32,9 @@ static int	ft_bits(t_stack **stack)
 	return (bits);
 }
 
-void	ft_radix(t_stack **stack_a, t_stack **stack_b)
+void	ft_radix(t_list **stack_a, t_list **stack_b)
 {
-	t_stack	*top_a;
+	t_list	*top_a;
 	int		i;
 	int		j;
 	int		size;

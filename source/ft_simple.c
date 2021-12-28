@@ -6,15 +6,15 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 21:43:14 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/25 22:02:39 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 14:26:07 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int	ft_min_num(t_stack **stack, int num)
+static int	ft_min_num(t_list **stack, int num)
 {
-	t_stack	*top;
+	t_list	*top;
 	int			min_val;
 
 	top = *stack;
@@ -28,9 +28,9 @@ static int	ft_min_num(t_stack **stack, int num)
 	return (min_val);
 }
 
-static void	sor_3nbr(t_stack **stack_a)
+static void	sort_3nbr(t_list **stack_a)
 {
-	t_stack	*top;
+	t_list		*top;
 	int			min;
 	int			min_next;
 
@@ -64,13 +64,13 @@ static void	sor_3nbr(t_stack **stack_a)
 	}
 }
 
-static void	sort_4nbr(t_stack **stack_a, t_stack **stack_b)
+static void	sort_4nbr(t_list **stack_a, t_list **stack_b)
 {
 	int num;
 
 	if (ft_stack_sorted(stack_a))
 		return ;
-	num = distToNum(stack_a, ft_min_num(stack_a, -1));
+	num = ft_distToNum(stack_a, ft_min_num(stack_a, -1));
 	if (num == 1)
 		ra(stack_a);
 	else if (num == 2)
@@ -87,11 +87,11 @@ static void	sort_4nbr(t_stack **stack_a, t_stack **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	sort_5nbr(t_stack **stack_a, t_stack **stack_b)
+void	sort_5nbr(t_list **stack_a, t_list **stack_b)
 {
 	int	num;
 
-	num = distToNum(stack_a, ft_min_num(stack_a, -1));
+	num = ft_distToNum(stack_a, ft_min_num(stack_a, -1));
 	if (num == 1)
 		ra(stack_a);
 	else if (num == 2)
@@ -113,11 +113,12 @@ void	sort_5nbr(t_stack **stack_a, t_stack **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	ft_simple(t_stack **stack_a, t_stack **stack_b)
+void	ft_simple(t_list **stack_a, t_list **stack_b)
 {
 	int	size;
 
-	if (ft_stack_sorted(stack_a) || ft_lstsize(*stack_a) == 0 || ft_lstsize(*stack_a) == 1)
+	if (ft_stack_sorted(stack_a) || ft_lstsize(*stack_a) == 0
+		|| ft_lstsize(*stack_a) == 1)
 		return ;
 	size = ft_lstsize(*stack_a);
 	if (size == 2)
