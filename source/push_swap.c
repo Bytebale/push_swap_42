@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:34:09 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/27 18:51:33 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/12 16:44:30 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,16 @@ int	main(int argc, char **argv)
 	t_list		**stack_b;
 	t_support	data;
 
-	data.argv = argv;
 	data.argc = argc;
+	data.argv = argv;
 	data.i = 0;
 	if (argc < 2)
 		return (-1);
 	ft_check(&data);
 	stack_a = (t_list **)malloc(sizeof(t_list));
 	stack_b = (t_list **)malloc(sizeof(t_list));
+	*stack_a = NULL;
+	*stack_b = NULL;
 	ft_make_stack(stack_a, &data);
 	if (ft_stack_sorted(stack_a))
 	{

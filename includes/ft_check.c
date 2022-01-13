@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:48:23 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/27 16:28:49 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/12 16:25:32 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,6 @@ void	ft_check(t_support *data)
 			ft_put_err("error", 1);
 		data->i++;
 	}
+	if (data->argc == 2)
+		exit(EXIT_FAILURE);
 }

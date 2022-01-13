@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:38:44 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/28 15:55:59 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/12 16:13:17 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst == NULL)
-		return (0);
-	while (lst)
+	t_list	*tmp;
+
+	tmp = lst;
+	while (tmp->next)
 	{
-		if (!lst->next == NULL)
-			return (lst);
-		lst = lst->next;
+		tmp = tmp->next;
+		if (tmp->next == NULL)
+			return (tmp);
 	}
-	return (lst);
+	return (tmp);
 }
