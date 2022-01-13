@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:21:41 by lshonta           #+#    #+#             */
-/*   Updated: 2022/01/13 21:53:26 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/13 22:32:40 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	ft_put_index(t_list **stack);
 void	ft_simple(t_list **stack_a, t_list **stack_b);
 void	sort_5nbr(t_list **stack_a, t_list **stack_b);
 void	ft_radix(t_list **stack_a, t_list **stack_b);
+void	sort_utils(t_list **stack_a, t_list *top, int min);
 
 int		push_rule(t_list **stack_to, t_list **stack_from);
 int		pb(t_list **stack_a, t_list **stack_b);

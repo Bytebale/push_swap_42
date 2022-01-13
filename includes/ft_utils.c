@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 00:05:34 by lshonta           #+#    #+#             */
-/*   Updated: 2022/01/13 21:20:52 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/13 22:33:23 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,15 @@ int	ft_dist_to_num(t_list **stack, int i)
 		top = top->next;
 	}
 	return (dist);
+}
+
+void	sort_utils(t_list **stack_a, t_list *top, int min)
+{
+	if (top->next->index == min)
+		ra(stack_a);
+	else
+	{
+		sa(stack_a);
+		rra(stack_a);
+	}
 }

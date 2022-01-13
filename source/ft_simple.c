@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 21:43:14 by lshonta           #+#    #+#             */
-/*   Updated: 2022/01/13 21:53:20 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/13 22:31:42 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,7 @@ static void	sort_3nbr(t_list **stack_a)
 			rra(stack_a);
 	}
 	else
-	{
-		if (top->next->index == min)
-			ra(stack_a);
-		else
-		{
-			sa(stack_a);
-			rra(stack_a);
-		}
-	}
+		sort_utils(stack_a, top, min);
 }
 
 static void	sort_4nbr(t_list **stack_a, t_list **stack_b)
