@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 21:07:06 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/27 14:28:11 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:21:50 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,3 @@ int	ss(t_list **stack_a, t_list **stack_b)
 	ft_putendl_fd("ss", 1);
 	return (0);
 }
-

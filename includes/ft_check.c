@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:48:23 by lshonta           #+#    #+#             */
-/*   Updated: 2022/01/12 16:25:32 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:15:27 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_repeat_arg(int nbr, t_support *data, int i)
 static int	ft_isnum(char *nbr)
 {
 	int	i;
-	
+
 	i = 0;
 	if (nbr[0] == '-')
 		i++;
@@ -42,13 +42,12 @@ static int	ft_isnum(char *nbr)
 
 void	ft_check(t_support *data)
 {
-	
-	long		num;
+	long	num;
 
 	data->i = 1;
 	while (data->argv[data->i])
 	{
-		num = ft_atoi(data->argv[data->i]); 
+		num = ft_atoi(data->argv[data->i]);
 		if (!ft_isnum(data->argv[data->i]))
 			ft_put_err("error", 1);
 		if (ft_repeat_arg(num, data, data->i))

@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:34:09 by lshonta           #+#    #+#             */
-/*   Updated: 2022/01/12 16:44:30 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:24:56 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	main(int argc, char **argv)
 	{
 		ft_free_stack(stack_a);
 		ft_free_stack(stack_b);
-		return(0);
+		return (0);
 	}
 	ft_sort(stack_a, stack_b);
 	ft_free_stack(stack_a);

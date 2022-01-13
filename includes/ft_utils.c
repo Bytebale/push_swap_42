@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 00:05:34 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/27 14:28:49 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:20:52 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_free_stack(t_list **stack)
 int	ft_stack_sorted(t_list	**stack)
 {
 	t_list	*top;
-	
+
 	top = *stack;
 	while (top && top->next)
 	{
@@ -47,9 +47,9 @@ int	ft_stack_sorted(t_list	**stack)
 	return (1);
 }
 
-int ft_distToNum(t_list **stack, int i)
+int	ft_dist_to_num(t_list **stack, int i)
 {
-	t_list *top;
+	t_list	*top;
 	int		dist;
 
 	dist = 0;
