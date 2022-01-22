@@ -6,12 +6,12 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 23:48:23 by lshonta           #+#    #+#             */
-/*   Updated: 2022/01/22 19:49:12 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/22 19:53:33 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-#include <stdio.h>
+
 static int	ft_repeat_arg(int nbr, t_support *data, int i)
 {
 	i++;
