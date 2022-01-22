@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 19:26:28 by lshonta           #+#    #+#             */
-/*   Updated: 2021/10/21 18:34:59 by lshonta          ###   ########.fr       */
+/*   Updated: 2022/01/22 19:47:43 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	*ft_ispace(const char *str)
 	return ((char *)str);
 }
 
-int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
 	int			sign;
 	long int	n;
